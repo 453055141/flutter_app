@@ -26,7 +26,28 @@ class HomeFragmentStart extends State<HomeFragment> {
         appBar: AppBar(
           title: Row(
             children: <Widget>[
-              Image.asset("images/16pic_4875478_b.jpg"),
+              ClipOval(
+                child: Image.asset(
+                  "images/image/16pic_4875478_b.jpg",
+                  width: 60.0,
+                  height: 40.0,
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 15.0),
+                alignment: Alignment.centerLeft,
+                padding: EdgeInsets.only(left: 4.0),
+                width: 180.0,
+                height: 30.0,
+                child: Icon(
+                  Icons.search,
+                  color: Colors.white,
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.black26,
+                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                ),
+              ),
             ],
           ),
           centerTitle: true,
