@@ -11,6 +11,8 @@ class HomeFragment extends StatefulWidget {
 }
 
 class HomeFragmentStart extends State<HomeFragment> {
+  bool isVisible = false;
+
   @override
   void initState() {
     // TODO: implement initState
@@ -24,6 +26,7 @@ class HomeFragmentStart extends State<HomeFragment> {
       theme: ThemeData(primaryColor: Color.fromARGB(255, 250, 150, 150)),
       home: Scaffold(
         appBar: AppBar(
+          elevation: 0.0,
           title: Row(
             children: <Widget>[
               new CircleAvatar(
@@ -70,7 +73,7 @@ class HomeFragmentStart extends State<HomeFragment> {
               Padding(
                 padding: EdgeInsets.only(left: 10.0),
                 child: new Image.asset(
-                  "images/mipmap-xhdpi-v4/gteq_icon_main_pj.png",
+                  "images/mipmap-xhdpi-v4/gteq_icon_main_eqlist.png",
                   width: 35.0,
                   height: 38.0,
                 ),
@@ -81,20 +84,170 @@ class HomeFragmentStart extends State<HomeFragment> {
         ),
         body: new ListView(
           children: <Widget>[
-            Row(
-              children: <Widget>[
-                Column(
-                  children: <Widget>[
-                    Text("直播"),
-                    Container(
-                      height: 1.0,
-                      width: 30.0,
-                      color: Colors.redAccent,
-                    ),
-                  ],
-                ),
-              ],
+            Container(
+              color: Colors.white,
+              padding: new EdgeInsets.only(top: 15.0),
+              alignment: Alignment.center,
+              height: 60.0,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Column(
+                    children: <Widget>[
+                      Text("直播"),
+                      Container(
+                        margin: EdgeInsets.only(top: 5.0),
+                        height: 1.0,
+                        width: 30.0,
+                        color: Colors.redAccent,
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Text("推荐"),
+                      Container(
+                        margin: EdgeInsets.only(top: 5.0),
+                        height: 1.0,
+                        width: 30.0,
+                        color: isVisible ? Colors.redAccent : Colors.white,
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Text("追番"),
+                      Container(
+                        margin: EdgeInsets.only(top: 5.0),
+                        height: 1.0,
+                        width: 30.0,
+                        color: isVisible ? Colors.redAccent : Colors.white,
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Text("国家宝藏"),
+                      Container(
+                        margin: EdgeInsets.only(top: 5.0),
+                        height: 1.0,
+                        width: 30.0,
+                        color: isVisible ? Colors.redAccent : Colors.white,
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Text("故事王2"),
+                      Container(
+                        margin: EdgeInsets.only(top: 5.0),
+                        height: 1.0,
+                        width: 30.0,
+                        color: isVisible ? Colors.redAccent : Colors.white,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
+            Padding(
+              padding: EdgeInsets.all(10.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                child: Image.asset(
+                  "images/image/16pic_4902013_s.jpg",
+                  fit: BoxFit.cover,
+                  height: 120.0,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 200.0,
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return Container(
+                    margin: EdgeInsets.all(15.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        Column(
+                          children: <Widget>[
+                            Image.asset(
+                              "images/image/16pic_4901983_s.jpg",
+                              width: 60.0,
+                              height: 30.0,
+                              fit: BoxFit.fill,
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(top: 10.0),
+                              child: Text("英雄联盟"),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: <Widget>[
+                            Image.asset(
+                              "images/image/16pic_4901983_s.jpg",
+                              width: 60.0,
+                              height: 30.0,
+                              fit: BoxFit.fill,
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(top: 10.0),
+                              child: Text("英雄联盟"),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: <Widget>[
+                            Image.asset(
+                              "images/image/16pic_4901983_s.jpg",
+                              width: 60.0,
+                              height: 30.0,
+                              fit: BoxFit.fill,
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(top: 10.0),
+                              child: Text("英雄联盟"),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: <Widget>[
+                            Image.asset(
+                              "images/image/16pic_4901983_s.jpg",
+                              width: 60.0,
+                              height: 30.0,
+                              fit: BoxFit.fill,
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(top: 10.0),
+                              child: Text("英雄联盟"),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: <Widget>[
+                            Image.asset(
+                              "images/image/16pic_4901983_s.jpg",
+                              width: 60.0,
+                              height: 30.0,
+                              fit: BoxFit.fill,
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(top: 10.0),
+                              child: Text("英雄联盟"),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  );
+                },
+                itemCount: 2,
+              ),
+            ),
+            Container(height: 1.0,color: Colors.black12,),
           ],
         ),
       ),
