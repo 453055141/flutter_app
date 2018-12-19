@@ -247,7 +247,37 @@ class HomeFragmentStart extends State<HomeFragment> {
                 itemCount: 2,
               ),
             ),
-            Container(height: 1.0,color: Colors.black12,),
+            Container(
+              height: 1.0,
+              color: Colors.black12,
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 10.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.only(left: 10.0, right: 10.0),
+                    child: Text("我的关注"),
+                  ),
+                  Text(
+                    "16小时之前",
+                    style: TextStyle(color: Colors.black26),
+                  ),
+                  Text("我的关注"),
+                  Text(
+                    "直播了唱见电台",
+                    style: TextStyle(color: Colors.black26),
+                  ),
+                  Icon(Icons.chevron_right),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 10.0),
+              height: 1.0,
+              color: Colors.black12,
+            ),
           ],
         ),
       ),
