@@ -278,6 +278,58 @@ class HomeFragmentStart extends State<HomeFragment> {
               height: 1.0,
               color: Colors.black12,
             ),
+            Container(
+              height: 50.0,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Text("推荐直播"),
+                  Row(
+                    children: <Widget>[Text("缓一缓"), Icon(Icons.refresh)],
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 300.0,
+              child: GridView.builder(
+//                physics: NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 10.0,
+                  crossAxisSpacing: 10.0,
+                  childAspectRatio: 1.2,
+                ),
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: EdgeInsets.only(left: 10.0, right: 10.0),
+                    child: Column(
+                      children: <Widget>[
+                        Padding(
+                          padding: EdgeInsets.all(10.0),
+                          child: ClipRRect(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10.0)),
+                            child: Image.asset(
+                              "images/lonnv10.jpg",
+                              fit: BoxFit.cover,
+                              width: 150.0,
+                              height: 100.0,
+                            ),
+                          ),
+                        ),
+                        Text("王者榮燿"),
+                        Text("手機游戲",
+                            style: TextStyle(
+                              color: Colors.black38,
+                            )),
+                      ],
+                    ),
+                  );
+                },
+                itemCount: 6,
+              ),
+            ),
           ],
         ),
       ),
