@@ -29,9 +29,24 @@ class HomeFragmentStart extends State<HomeFragment> {
           elevation: 0.0,
           title: Row(
             children: <Widget>[
-              new CircleAvatar(
-                  backgroundImage: AssetImage("images/16pic_4875478_b.jpg"),
-                  radius: 15.0),
+              Stack(
+                alignment: AlignmentDirectional(1.2, -1.3),
+                children: <Widget>[
+                  new CircleAvatar(
+                      backgroundImage: AssetImage("images/16pic_4875478_b.jpg"),
+                      radius: 15.0),
+                  Container(
+                    width: 6.0,
+                    height: 6.0,
+                    decoration: BoxDecoration(
+                      color: Colors.redAccent,
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.white, width: 0.5),
+                    ),
+                  ),
+                ],
+              ),
+
 //              new ClipOval(
 //                child: new Image.asset(
 //                  "images/16pic_4875478_b.jpg",
@@ -306,16 +321,46 @@ class HomeFragmentStart extends State<HomeFragment> {
                     child: Column(
                       children: <Widget>[
                         Padding(
-                          padding: EdgeInsets.all(10.0),
-                          child: ClipRRect(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10.0)),
-                            child: Image.asset(
-                              "images/lonnv10.jpg",
-                              fit: BoxFit.cover,
-                              width: 150.0,
-                              height: 100.0,
-                            ),
+                          padding: EdgeInsets.all(15.0),
+                          child: Stack(
+                            alignment: Alignment.bottomCenter,
+                            children: <Widget>[
+                              ClipRRect(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10.0)),
+                                child: Image.asset(
+                                  "images/lonnv10.jpg",
+                                  fit: BoxFit.cover,
+                                  width: 150.0,
+                                  height: 80.0,
+                                ),
+                              ),
+                              Container(
+                                padding: EdgeInsets.fromLTRB(10.0, 1.0, 10.0, 5.0),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    Text(
+                                      "陈哥1",
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                    Row(
+                                      children: <Widget>[
+                                        Icon(
+                                          Icons.perm_identity,
+                                          color: Colors.white,
+                                        ),
+                                        Text(
+                                          "10万人",
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                         Text("王者榮燿"),
