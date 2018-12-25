@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(new MaterialApp(
+    title: 'flutter tutorial',
+    home: new Counter(),
+  ));
+}
+
 class Counter extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
