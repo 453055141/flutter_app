@@ -17,7 +17,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  final _formKey = GlobalKey(FormState);
+  final _formKey = GlobalKey();
   String _email, _password;
   bool _isObscure = true;
   Color _eyeColor;
