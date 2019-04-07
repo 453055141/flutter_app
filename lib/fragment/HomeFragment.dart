@@ -46,14 +46,6 @@ class HomeFragmentStart extends State<HomeFragment> {
                   ),
                 ],
               ),
-
-//              new ClipOval(
-//                child: new Image.asset(
-//                  "images/16pic_4875478_b.jpg",
-//                  width: 35.0,
-//                  height: 38.0,
-//                ),
-//              ),
               Container(
                 margin: EdgeInsets.only(left: 15.0, right: 13.0),
                 alignment: Alignment.centerLeft,
@@ -336,7 +328,8 @@ class HomeFragmentStart extends State<HomeFragment> {
                                 ),
                               ),
                               Container(
-                                padding: EdgeInsets.fromLTRB(10.0, 1.0, 10.0, 5.0),
+                                padding:
+                                    EdgeInsets.fromLTRB(10.0, 1.0, 10.0, 5.0),
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
